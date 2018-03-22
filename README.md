@@ -1,7 +1,7 @@
 Ada CS Curriculum Booster Packs
 ===============================
 
-This is exactly what it is, a collection of supplemental modules for the fantastic [open source curriculum](https://github.com/Ada-Developers-Academy/textbook-curriculum) provided by [Ada Developer's Academy] (https://www.adadevelopersacademy.org/).
+This is exactly what it is, a collection of supplemental modules for the fantastic [open source curriculum](https://github.com/Ada-Developers-Academy/textbook-curriculum) provided by [Ada Developer's Academy](https://www.adadevelopersacademy.org/).
 
 The Mission of this Project
 ---------------------------
