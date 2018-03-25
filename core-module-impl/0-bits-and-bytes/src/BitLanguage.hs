@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module BitLanguage where
+module BitLanguage (BitExpr (..), evalToSteps) where
 
 import Data.Bits ((.&.), (.|.), xor, complement, unsafeShiftL, unsafeShiftR)
 import Data.Char (intToDigit)
@@ -112,7 +112,7 @@ constructBitNotMessage e1 = let
     in
       unlines [
         "",
-        "Performing bitwise not on " ++ strEvaledE1,
+        "Performing bitwise not (~) on " ++ strEvaledE1,
         "",
         strEvaledE1 ++ " in binary is " ++ convertInt32ToShowableBinary evaledE1 ++ ".",
         "",
