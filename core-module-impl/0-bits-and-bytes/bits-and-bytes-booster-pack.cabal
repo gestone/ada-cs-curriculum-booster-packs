@@ -60,7 +60,7 @@ executable bits-and-bytes-booster-pack
   -- other-extensions:
 
   -- Other library packages from which modules are imported.
-  build-depends:       base >=4.9 && <4.10, text, split, megaparsec
+  build-depends:       base >=4.9 && <4.10, text, split, megaparsec, haskeline
 
   -- Directories containing source files.
   hs-source-dirs:      src

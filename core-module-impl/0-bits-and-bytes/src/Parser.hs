@@ -31,8 +31,8 @@ term = parens expr
     <?> "term"
 
 table = [
-          [unary "~" BitNot],
-          [binary "<<" BitLeftShift, binary ">>" BitRightShift]
+          [unary "~" BitNot]
+        , [binary "<<" BitLeftShift, binary ">>" BitRightShift]
         , [binary "&" BitAnd]
         , [binary "^" BitXOr]
         , [binary "|" BitOr]

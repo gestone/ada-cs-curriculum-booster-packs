@@ -19,6 +19,7 @@ bitsSliceSize :: Int
 bitsSliceSize = 4
 
 data BitExpr = BitInt Int32
+  | BitMinus      BitExpr
   | BitLeftShift  BitExpr BitExpr
   | BitRightShift BitExpr BitExpr
   | BitNot        BitExpr
@@ -26,9 +27,6 @@ data BitExpr = BitInt Int32
   | BitXOr        BitExpr BitExpr
   | BitAnd        BitExpr BitExpr
   deriving Show
-
-bitLangExpr :: BitExpr
-bitLangExpr = BitLeftShift (BitAnd (BitInt 32) (BitInt 32)) (BitXOr (BitInt 10) (BitInt 4))
 
 -- Evaluate function of the parsed BitExpression
 eval :: BitExpr -> Int32
@@ -61,8 +59,7 @@ constructLeftShiftMessage :: BitExpr -> BitExpr -> String
 constructLeftShiftMessage e1 e2 = let
       (evaledE1, evaledE2) = (eval e1, eval e2)
       binaryE1 = convertInt32ToShowableBinary evaledE1
-      strE1 = show evaledE1
-      strE2 = show evaledE2
+      (strE1, strE2) = (show evaledE1, show evaledE2)
       evaledE1E2 = eval $ BitLeftShift e1 e2
     in
       unlines [
@@ -71,10 +68,7 @@ constructLeftShiftMessage e1 e2 = let
         "",
         strE1 ++ " in binary is " ++ binaryE1 ++ ".",
         "",
-        "Performing " ++ binaryE1 ++ " << " ++ strE2,
-        "",
-        "After shifting left by " ++ strE2 ++ " bits, the result from left shift is:",
-        "",
+        binaryE1 ++ " << " ++ strE2,
         convertInt32ToShowableBinary evaledE1E2,
         "",
         "Which in base 10 is equal to " ++ show evaledE1E2 ++ "."
@@ -94,10 +88,7 @@ constructRightShiftMessage e1 e2 = let
         "",
         strE1 ++ " in binary is " ++ binaryE1 ++ ".",
         "",
-        "Performing " ++ binaryE1 ++ " >> " ++ strE2,
-        "",
-        "After shifting right by " ++ strE2 ++ " bits, the result from right shift is:",
-        "",
+        binaryE1 ++ " >> " ++ strE2,
         convertInt32ToShowableBinary evaledE1E2,
         "",
         "Which in base 10 is equal to " ++ show evaledE1E2 ++ "."
@@ -116,7 +107,10 @@ constructBitNotMessage e1 = let
         "",
         strEvaledE1 ++ " in binary is " ++ convertInt32ToShowableBinary evaledE1 ++ ".",
         "",
-        "Flipping all of the bits, we get " ++ convertInt32ToShowableBinary evaledNot ++ ".",
+        "Flipping all the bits:",
+        "",
+        convertInt32ToShowableBinary evaledE1 ++ " ~",
+        convertInt32ToShowableBinary evaledNot,
         "",
         "Which in base 10 is equal to " ++ strEvaledNot ++ "."
       ]
