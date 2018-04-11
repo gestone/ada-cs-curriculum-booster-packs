@@ -3,12 +3,12 @@ Practical Applications of Bits and bytes
 
 In this card, we'll explore how we as software engineers can exploit how the computer interprets bits and bytes in order to make memory intensive applications to be *very* efficient.
 
-We'll take a look at how a specialized version of hash sets called a *bit set* can reduce the amount of memory that's allocated. If you need a quick refresher on what a hash set is and how it's implemented, take a look here.
+We'll take a look at how a specialized version of hash sets called a *bit set* can reduce the amount of memory that's allocated. If you need a quick refresher on what a hash set is and how it's implemented, take a look [here](https://beginnersbook.com/java-tutorial-for-beginners-with-examples/).
 
 So what's a bit set?
 ====================
 
-A bit set is a special type of set that uses an array of bytes as its underlying backing data structure. This implementation is much more specific than how a hash set is implemented since usually, hash sets are implemented with an array of nodes where each node contains the key and value. Bit sets can only remember if they've seen integers and longs. They cannot remember certain key value pairs and do not typically handle collisions.
+A bit set is a special type of set that uses an array of bytes as its underlying backing data structure. This implementation is much more specific than how a hash set is implemented since usually, hash sets are implemented with an array of nodes where each node contains the key and value. Bit sets can only remember if they've seen an element. They cannot remember certain key value pairs and do not handle collisions.
 
 This storing of not only the node, but also the key and value works well in most cases, but when the hash set grows to hold millions of elements, a given application might start to run low on memory to give to other parts of the application. To address this, we'll take advantage of the fact that each byte has 8 bits and we can use each bit to denote whether or not we've *seen* an element.
 
