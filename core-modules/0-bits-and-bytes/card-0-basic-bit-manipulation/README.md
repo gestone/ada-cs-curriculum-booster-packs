@@ -101,7 +101,7 @@ The first operator we'll explore is bitshifting. There are actually two bitshift
 
 1. Bitwise Left Shift `<<`
     * In the REPL, type in `1 << 1` and press enter. What happened?
-    * Now type in `2 << 2` and `4 << 4`. Where did the `1` go and how many places did it move by?
+    * Now type in `8 << 2` and `4 << 4`. Where did the `1` go and how many places did it move by?
     * Given what you know so far from the REPL, what does `3 << 1` evaluate to in binary and in base 10? Try doing this on a piece of paper before hitting enter on the REPL.
     * Since we're manipulating 32 bit `int`s, let's try breaking things! What happens when you evaluate `1 << 32` in the REPL? Is this what you expected?
 
@@ -116,3 +116,16 @@ For now, let's move onto bitwise right shift!
     * What does `1 << 2 >> 3` evaluate to? Try to see if you can solve this before letting the REPL do its magic!
 
 Feel free to explore more with the bitwise left shift and right shift operators before moving on to the next section!
+
+### Bitwise & and | 
+
+The second set of operators we'll be exploring are bitwise and and bitwise or (`&` and `|`) respectively.
+
+1. Bitwise And `&`
+    * To understand what `&` does, `&` two numbers (i.e `0 & 0`, `0 & 1`) and record your findings in the below table:
+    * |       &       |   0   |   1   |
+      | ------------- |:-----:| -----:|
+      |       0       |       |       |
+      |       1       |       |       |
+
+
