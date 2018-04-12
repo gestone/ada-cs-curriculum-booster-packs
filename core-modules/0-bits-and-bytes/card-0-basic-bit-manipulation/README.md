@@ -37,13 +37,13 @@ Note that the above only works for positive numbers. We'll address how we repres
 Using the above definition, let's start off with converting the number `6` to binary.
 
 ```ruby
-Recursively, to_binary(6) expands to:
+# Recursively, to_binary(6) expands to:
 
 to_binary(6) = to_binary(3) + (6 % 2).to_s
 to_binary(3) = to_binary(1) + (3 % 2).to_s
 to_binary(1) = '1'
 
-Recursing back up and substituting terms in:
+# Recursing back up and substituting terms in:
 
 to_binary(3) = '1' + (3 % 2).to_s
 to_binary(3) = '1' + '1'
@@ -100,21 +100,19 @@ Fire up the REPL by invoking `./bits-repl` and let's get started!
 The first operator we'll explore is bitshifting. There are actually two bitshifting operators, bit left shift `<<` and bit right shift `>>`.
 
 1. Bitwise Left Shift `<<`
-    a. In the REPL, type in `1 << 1` and press enter. What happened?
-    b. Now type in `2 << 2` and `4 << 4`. Where did the `1` go and how many places did it move by?
-    c. Given what you know so far from the REPL, what does `3 << 1` evaluate to in binary and in base 10? Try doing this on a piece of paper before hitting enter on the REPL.
-    d. Since we're manipulating 32 bit `int`s, let's try breaking things! What happens when you evaluate `1 << 32` in the REPL? Is this what you expected?
+    * In the REPL, type in `1 << 1` and press enter. What happened?
+    * Now type in `2 << 2` and `4 << 4`. Where did the `1` go and how many places did it move by?
+    * Given what you know so far from the REPL, what does `3 << 1` evaluate to in binary and in base 10? Try doing this on a piece of paper before hitting enter on the REPL.
+    * Since we're manipulating 32 bit `int`s, let's try breaking things! What happens when you evaluate `1 << 32` in the REPL? Is this what you expected?
 
 You don't have to answer this next question, but try entering in `1 << 31`. Were you surprised at all? We'll talk more about this later when we talk about how integers are represented.
 
 For now, let's move onto bitwise right shift!
 
 2. Bitwise Right Shift `>>`
-    a. In the REPL, type in `2 >> 1` and press enter. What happened?
-    b. Now type in `32 >> 2`. Which direction did the `1` move and how many places did it move by?
-    c. Let's give `10 >> 3` a shot. Did that do what you expected it to?
-    d. What does `1 << 2 >> 3` evaluate to? Try to see if you can solve this before letting the REPL do its magic!
+    * In the REPL, type in `2 >> 1` and press enter. What happened?
+    * Now type in `32 >> 2`. Which direction did the `1` move and how many places did it move by?
+    * Let's give `10 >> 3` a shot. Did that do what you expected it to?
+    * What does `1 << 2 >> 3` evaluate to? Try to see if you can solve this before letting the REPL do its magic!
 
 Feel free to explore more with the bitwise left shift and right shift operators before moving on to the next section!
-
-
