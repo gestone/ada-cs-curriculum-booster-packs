@@ -27,7 +27,6 @@ introWelcomeMessage = unlines [
     "Before we start exploring however, do note a couple of things: ",
     "\t- To exit out of this application, type in ':quit'.",
     "\t- Please feel free to give feedback! Submit an issue here: https://github.com/gestone/ada-cs-curriculum-booster-packs/issues if you have any feedback about this lab.",
-    "\t- If you need any help with operators are available to you and what they do, feel free to type in ':help'.",
     "",
     "Now you might be wondering, why explore these concepts in a REPL like this? Well, we could demonstrate a lot of these same concepts in other languages like Ruby,\
     \ but this custom REPL is built specifically for showing step by step what the computer is doing to bitwise operations easier to understand.",
