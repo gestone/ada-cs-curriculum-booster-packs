@@ -198,10 +198,10 @@ And again, feel free to submit PRs so we can take a look!
 
 * Bitwise XOr: `^`
     * Here we go with the table again! This operator is a little trickier, but it should make sense after filling out this table:
-    ^ | 0 | 1
-    --- | --- | ---
-    0 |   |
-    1 |   |
+^ | 0 | 1
+--- | --- | ---
+0 |   |
+1 |   |
     * After filling out the table, again, experiment with `^` before moving on to the problem below!
 
 Write a Ruby method, `flip_nth_bit` which is similar to `set_nth_bit` except if the bit at the `nth` position is already set, the bit should be flipped back to 0.
