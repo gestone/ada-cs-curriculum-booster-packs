@@ -124,11 +124,11 @@ The second set of operators we'll be exploring are bitwise `and`, `or`, and `xor
 * Bitwise And: `&`
     * To understand what `&` does, `&` all the different combinations of `0` and `1` (i.e `0 & 0`, `0 & 1`) and record your findings in the below table.
       I've filled out the upper left entry to help get you started which is the result of `0 & 0`.
-    |               |   0   |   1   |
-    | ------------- |-------|-------|
-    |       0       |   0   |       |
-    |       1       |       |       |
     * After filling out the table, try using `&` on other numbers! Try `31 & 30`. Do the bits follow your findings that you have in your table?
+    * |       &       |   0   |   1   |
+      | ------------- |:-----:| -----:|
+      |       0       |   0   |       |
+      |       1       |       |       |
 
 Write a Ruby method, `first_n_set` that takes in two integers, with the second integer representing how many bits in the first number should be set. 
 It should return `true` if the first `n` bits of a number are set and `false` otherwise.
@@ -162,11 +162,11 @@ Hint: You'll need to use `>>` or `<<` in conjunction with `&`.
 
 * Bitwise Or: `|`
     * Fill out the same table above but try it out with `|`
-    |               |   0   |   1   |
-    | ------------- |-------|-------|
-    |       0       |       |       |
-    |       1       |       |       |
     * Try to experiment with `|` with other numbers as well!
+    * |       |       |   0   |   1   |
+      | ------------- |:-----:| -----:|
+      |       0       |       |       |
+      |       1       |       |       |
 
 Write a Ruby method, `set_nth_bit` which takes two integers with the first being a integer and the second being `n` that returns that same number with the `nth` bit flipped on. 
 If the bit is already turned on, return the original number (hint: you won't need to implement any special logic for this if you use `|` correctly).
@@ -198,11 +198,11 @@ And again, feel free to submit PRs so we can take a look!
 
 * Bitwise XOr: `^`
     * Here we go with the table again! This operator is a little trickier, but it should make sense after filling out this table:
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-    * After filling out the table, again, experiment with `^` before moving on to the problem below!
+    * After filling out the table, experiment with `^` before moving on to the problem below!
+    * |       ^       |   0   |   1   |
+      | ------------- |:-----:| -----:|
+      |       0       |       |       |
+      |       1       |       |       |
 
 Write a Ruby method, `flip_nth_bit` which is similar to `set_nth_bit` except if the bit at the `nth` position is already set, the bit should be flipped back to 0.
 
