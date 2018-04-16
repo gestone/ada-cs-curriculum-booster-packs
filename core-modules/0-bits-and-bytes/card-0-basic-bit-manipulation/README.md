@@ -163,10 +163,11 @@ Hint: You'll need to use `>>` or `<<` in conjunction with `&`.
 * Bitwise Or: `|`
     * Fill out the same table above but try it out with `|`
     * Try to experiment with `|` with other numbers as well!
-    * |      `|`      |   0   |   1   |
-      | ------------- |:-----:| -----:|
-      |       0       |       |       |
-      |       1       |       |       |
+
+|      `|`      |   0   |   1   |
+| ------------- |:-----:| -----:|
+|       0       |       |       |
+|       1       |       |       |
 
 Write a Ruby method, `set_nth_bit` which takes two integers with the first being a integer and the second being `n` that returns that same number with the `nth` bit flipped on. 
 If the bit is already turned on, return the original number (hint: you won't need to implement any special logic for this if you use `|` correctly).
