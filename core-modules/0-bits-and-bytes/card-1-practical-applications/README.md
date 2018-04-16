@@ -63,7 +63,7 @@ We can also call `contains` and pass an index to check if it's on:
 
 ```java
 boolean fourFlippedOn = bitSet.contains(4); // Returns false
-bitSet.flip(5); BitSet
+bitSet.flip(5);
 
      BYTE 1             BYTE 2
 -------------------------------------
