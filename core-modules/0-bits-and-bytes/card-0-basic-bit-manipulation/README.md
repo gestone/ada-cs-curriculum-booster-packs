@@ -198,7 +198,7 @@ And again, feel free to submit PRs so we can take a look!
 
 * Bitwise XOr: `^`
     * Here we go with the table again! This operator is a little trickier, but it should make sense after filling out this table:
-    * ^ | 0 | 1
+    ^ | 0 | 1
     --- | --- | ---
     0 |   |
     1 |   |
