@@ -125,7 +125,7 @@ The second set of operators we'll be exploring are bitwise `and`, `or`, and `xor
     * To understand what `&` does, `&` all the different combinations of `0` and `1` (i.e `0 & 0`, `0 & 1`) and record your findings in the below table.
       I've filled out the upper left entry to help get you started which is the result of `0 & 0`.
     * After filling out the table, try using `&` on other numbers! Try `31 & 30`. Do the bits follow your findings that you have in your table?
-    * |       &       |   0   |   1   |
+    * |      `&`      |   0   |   1   |
       | ------------- |:-----:| -----:|
       |       0       |   0   |       |
       |       1       |       |       |
@@ -163,7 +163,7 @@ Hint: You'll need to use `>>` or `<<` in conjunction with `&`.
 * Bitwise Or: `|`
     * Fill out the same table above but try it out with `|`
     * Try to experiment with `|` with other numbers as well!
-    * |       |       |   0   |   1   |
+    * |      `|`      |   0   |   1   |
       | ------------- |:-----:| -----:|
       |       0       |       |       |
       |       1       |       |       |
@@ -199,7 +199,7 @@ And again, feel free to submit PRs so we can take a look!
 * Bitwise XOr: `^`
     * Here we go with the table again! This operator is a little trickier, but it should make sense after filling out this table:
     * After filling out the table, experiment with `^` before moving on to the problem below!
-    * |       ^       |   0   |   1   |
+    * |      `^`      |   0   |   1   |
       | ------------- |:-----:| -----:|
       |       0       |       |       |
       |       1       |       |       |
