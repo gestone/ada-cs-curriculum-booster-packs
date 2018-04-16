@@ -18,7 +18,6 @@ Bit Set Operations
 ==================
 
 ```java
-BitSet
 BitSet bitSet = new BitSet(16);
 ```
 
