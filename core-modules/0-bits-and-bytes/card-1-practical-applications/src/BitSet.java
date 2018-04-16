@@ -12,7 +12,6 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 public class BitSet {
 
     private byte[] allBytes;
-    private long numSpaces;
 
     /**
      *
@@ -30,7 +29,9 @@ public class BitSet {
      *
      * As an aside, we'll want to keep this field private so we don't let clients do something like:
      *
-     * bitSet.allBytes[0] = 100; // Now all our bits in the byte are messed up! :(
+     * bitSet.allBytes[0] = 7; // Now all our bits in the byte are messed up! :(
+     *
+     * Just for reference, a byte in Java is like an integer, but only has 8 bits rather than 32.
      *
      * Hint: When initializing byte arrays in Java, all the bytes in the array are already zeroed out.
      */
@@ -49,21 +50,23 @@ public class BitSet {
      * then use bitshifting magic with operators (<<, >>, ~, |, &, ^) to flip just that bit that you want to set.
      *
      * If the index given is negative, throw a new IllegalArgumentException. See exceptions here: https://www.geeksforgeeks.org/throw-throws-java/
-     * If the index given is larger than the number of spaces, resize allBytes, copy all the existing longs 
-     * into a new array, then flip the index in the resized BitSet.
+     * If the index given is larger than the number of spaces, resize allBytes, copy all the existing bytes
+     * into a new array that has a size of twice the capacity, then flip the index in the resized BitSet.
      *
      * @param index the index to flip. If the bit at that index is set, then flip it to 0, otherwise flip it to 1.
      */
-    public void flip(long index) {
+    public void flip(int index) {
         throw new NotImplementedException();
     }
 
     /**
      * Returns whether or not the bit at index is set in the BitSet.
      *
-     * @param index the index to look at 
+     * If the index passed in does not exist, return false.
+     *
+     * @param index the index to look at
      */
-    public boolean contains(long index) {
+    public boolean contains(int index) {
         throw new NotImplementedException();
     }
 
@@ -73,5 +76,4 @@ public class BitSet {
     public void clear() {
         throw new NotImplementedException();
     }
-
 }

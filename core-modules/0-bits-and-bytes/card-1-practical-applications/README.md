@@ -18,7 +18,7 @@ Bit Set Operations
 ==================
 
 ```java
-// Initialize a new BitSet with 16 spots.
+BitSet
 BitSet bitSet = new BitSet(16);
 ```
 
@@ -63,7 +63,7 @@ We can also call `contains` and pass an index to check if it's on:
 
 ```java
 boolean fourFlippedOn = bitSet.contains(4); // Returns false
-bitSet.flip(5); // Flips the element at the 6th bit on. The state of the BitSet is as follows:
+bitSet.flip(5); BitSet
 
      BYTE 1             BYTE 2
 -------------------------------------

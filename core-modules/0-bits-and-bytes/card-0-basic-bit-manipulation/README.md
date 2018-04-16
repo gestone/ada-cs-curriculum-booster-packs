@@ -124,7 +124,7 @@ The second set of operators we'll be exploring are bitwise `and`, `or`, and `xor
 * Bitwise And: `&`
     * To understand what `&` does, `&` all the different combinations of `0` and `1` (i.e `0 & 0`, `0 & 1`) and record your findings in the below table.
       I've filled out the upper left entry to help get you started which is the result of `0 & 0`.
-    |       &       |   0   |   1   |
+    |               |   0   |   1   |
     | ------------- |-------|-------|
     |       0       |   0   |       |
     |       1       |       |       |
@@ -162,7 +162,7 @@ Hint: You'll need to use `>>` or `<<` in conjunction with `&`.
 
 * Bitwise Or: `|`
     * Fill out the same table above but try it out with `|`
-    |       |       |   0   |   1   |
+    |               |   0   |   1   |
     | ------------- |-------|-------|
     |       0       |       |       |
     |       1       |       |       |
@@ -198,10 +198,10 @@ And again, feel free to submit PRs so we can take a look!
 
 * Bitwise XOr: `^`
     * Here we go with the table again! This operator is a little trickier, but it should make sense after filling out this table:
-    |       ^       |   0   |   1   |
-    | ------------- |-------|-------|
-    |       0       |       |       |
-    |       1       |       |       |
+    * ^ | 0 | 1
+    --- | --- | ---
+    0 |   |
+    1 |   |
     * After filling out the table, again, experiment with `^` before moving on to the problem below!
 
 Write a Ruby method, `flip_nth_bit` which is similar to `set_nth_bit` except if the bit at the `nth` position is already set, the bit should be flipped back to 0.
