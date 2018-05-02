@@ -97,6 +97,21 @@ Building a BitSet
 
 Using what we've learned about bitwise operations from the first training module, let's go ahead and try implementing our own BitSet and use it to solve a tough problem!
 
-We'll be using `Java` to implement a `BitSet`. For a quick refresher on basic `Java` syntax, check out this page. All the bitwise operators like `<<`, `>>` you saw in the `REPL` from the previous card will work just as expected in Java.
+We'll be using `Java` to implement a `BitSet`. For a quick refresher on basic `Java` syntax, check out this page. All the bitwise operators like `<<`, `>>` you saw in the `REPL` from the previous card will work just as expected in `Java`.
 
-When you're ready to start, feel free to open up `src/BitSet.java` to begin!
+Setting up your development environment
+==================
+
+For this card, we're going to make heavy use of a popular integrated developerment environment (IDE), Intellij.
+
+Follow these steps to get your environment setup on Mac OSX:
+
+* Install `brew` if you haven't yet [here](https://brew.sh/).
+* Run the following command: `brew update && brew tap caskroom/versions && brew cask install java8` to install `Java` if you don't already have it.
+* Install [Intellij](https://www.jetbrains.com/idea/).
+* After Intellij is installed, open up a new project and choose `ada-cs-curriculum-booster-packs/core-modules/0-bits-and-bytes/card-1-practical-applications/` as the root directory.
+* Go to `File -> Project Structure` and go to `Project Settings -> Project`. Click on `SDKs` and ensure that `1.8` is selected. 
+* On the same screen, go to `Libraries` and add a new Java library. Add both `hamcrest-core-1.3.jar` and `junit-4.12.jar`. These are dependencies we'll need to be able to
+run the `BitSet` tests.
+* You're all set! When you're ready to start, feel free to open up `src/BitSet.java` to begin!
+

@@ -20,6 +20,11 @@ What languages should I know before attempting to tackle these labs?
 
 Different langauges will be used to demonstrate different concepts when appropriate. It is not important that you master or gain a deep understanding of each language presented. It is more important to understand the underlying concepts behind each lab rather than trying to remember the exact syntax about how to do something in a particular language.
 
+How do I start working on a booster pack?
+------------------------------
+
+Start by cloning this repository and open up the `core-modules` directory. Read up on the `README.md` for the booster pack, follow the instructions, and start reading up on the cards!
+
 Requesting for a module or booster pack
 ------------------------------
 
